@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="InputTextBox" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:paddingTop">@dimen/size_20</item>
+        <item name="errorEnabled">false</item>
+        <item name="placeholderTextColor">@color/list_bg</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/size_16</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/size_16</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/size_16</item>
+        <item name="boxCornerRadiusTopStart">@dimen/size_16</item>
+        <item name="boxBackgroundColor">@color/list_bg</item>
+        <item name="hintTextColor">@color/list_bg</item>
+    </style>
+    <style name="RoundCorner5ImageStyle">
+        <item name="cornerSizeBottomLeft">@dimen/size_5</item>
+        <item name="cornerSizeBottomRight">@dimen/size_5</item>
+        <item name="cornerSizeTopLeft">@dimen/size_5</item>
+        <item name="cornerSizeTopRight">@dimen/size_5</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+</resources>

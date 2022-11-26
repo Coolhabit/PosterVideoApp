@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="White19TextStyle">
+        <item name="android:textSize">@dimen/text_19</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="White18TextStyle">
+        <item name="android:textSize">@dimen/text_18</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="White16TextStyle">
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="White15TextStyle">
+        <item name="android:textSize">@dimen/text_15</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Black16TextStyle">
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>
