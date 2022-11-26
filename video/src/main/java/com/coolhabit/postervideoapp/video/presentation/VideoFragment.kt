@@ -54,8 +54,19 @@ class VideoFragment : BaseFragment(R.layout.fragment_video) {
             )
         }
 
+        binding.toolbar.setNavigationOnClickListener {
+            Toast.makeText(
+                requireContext(),
+                requireContext().resources.getString(R.string.go_back),
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        binding.textBtn.setOnClickListener {
+        }
+
         posterAdapter.onClick = {
-            Toast.makeText(requireContext(), "$it", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
         }
     }
 

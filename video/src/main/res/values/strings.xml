@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="text_btn">TEXT</string>
+    <string name="go_back">You shall not pass!</string>
 </resources>
