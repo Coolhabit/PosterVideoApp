@@ -8,8 +8,11 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/poster"
+        app:strokeColor="@color/blue_select"
+        app:strokeWidth="@dimen/size_2"
         app:shapeAppearanceOverlay="@style/RoundCorner5ImageStyle"
         android:layout_width="@dimen/size_70"
+        android:padding="@dimen/size_1"
         android:layout_height="@dimen/size_0"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintTop_toTopOf="parent"

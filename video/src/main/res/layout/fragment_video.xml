@@ -14,17 +14,20 @@
         app:navigationIcon="@drawable/ic_arrow_back" />
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/video_container"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_208"
         android:layout_marginBottom="@dimen/size_44"
         app:cardCornerRadius="@dimen/size_16"
         app:layout_constraintBottom_toTopOf="@id/text_btn"
+        app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.exoplayer2.ui.PlayerView
-            android:layout_width="343dp"
-            android:layout_height="208dp"
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:surface_type="texture_view" />
     </com.google.android.material.card.MaterialCardView>
 
@@ -59,8 +62,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:indeterminateTint="@color/blue_select"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/video_container"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
