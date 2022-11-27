@@ -10,6 +10,7 @@ class CustomTouchListener(
     private var dX: Float = 0f
     private var dY: Float = 0f
 
+
     override fun onTouch(view: View, event: MotionEvent): Boolean {
 
         val newX: Float

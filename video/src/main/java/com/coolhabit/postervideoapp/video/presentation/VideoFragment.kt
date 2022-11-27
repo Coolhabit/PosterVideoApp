@@ -17,7 +17,9 @@ import com.coolhabit.postervideoapp.baseUI.presentation.BaseFragment
 import com.coolhabit.postervideoapp.baseUI.presentation.BaseViewModel
 import com.coolhabit.postervideoapp.video.R
 import com.coolhabit.postervideoapp.video.databinding.FragmentVideoBinding
+import com.coolhabit.postervideoapp.video.databinding.ViewEdittextItemBinding
 import com.coolhabit.postervideoapp.video.presentation.adapter.VideoPosterAdapter
+import com.coolhabit.postervideoapp.video.presentation.utils.CustomLongClickListener
 import com.coolhabit.postervideoapp.video.presentation.utils.CustomTouchListener
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
@@ -27,6 +29,7 @@ import com.google.android.exoplayer2.source.hls.HlsMediaSource
 import com.google.android.exoplayer2.trackselection.AdaptiveTrackSelection
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
+import com.google.android.material.textfield.TextInputEditText
 import javax.inject.Inject
 
 class VideoFragment : BaseFragment(R.layout.fragment_video), Player.Listener {
@@ -81,16 +84,28 @@ class VideoFragment : BaseFragment(R.layout.fragment_video), Player.Listener {
             ).show()
         }
 
+
+
         binding.textBtn.setOnClickListener {
-            val textView = EditText(requireContext())
-            textView.setText("Some text")
-            textView.isEnabled = true
-            textView.textColor(com.coolhabit.postervideoapp.baseUI.R.color.black)
-            textView.elevation = 2f
-            binding.root.addView(textView)
-            textView.setOnTouchListener(
-                CustomTouchListener(binding.root.width, binding.root.height)
+            val inflater = LayoutInflater.from(binding.root.context)
+            val newTextView = ViewEdittextItemBinding.inflate(inflater, binding.videoView, false)
+            newTextView.editText.setText("Some text")
+            newTextView.editText.isEnabled = true
+            newTextView.editText.textColor(com.coolhabit.postervideoapp.baseUI.R.color.white)
+//            newTextView.editText.setOnLongClickListener(
+//                CustomLongClickListener()
+//            )
+            newTextView.root.setOnTouchListener(
+                CustomTouchListener(
+                    binding.videoView.width,
+                    binding.videoView.height
+                )
             )
+            binding.videoContainer.addView(newTextView.root)
+
+            binding.root.setOnClickListener {
+                newTextView.editText.clearFocus()
+            }
         }
 
         posterAdapter.onClick = { id, url ->
