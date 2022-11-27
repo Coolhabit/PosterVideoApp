@@ -8,6 +8,5 @@
     <fragment
         android:id="@+id/fragment_video"
         android:name="com.coolhabit.postervideoapp.video.presentation.VideoFragment"
-        tools:layout="@layout/fragment_video">
-    </fragment>
+        tools:layout="@layout/fragment_video" />
 </navigation>

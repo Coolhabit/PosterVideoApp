@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.coolhabit.postervideoapp.domain.entities.VideoItem
 import com.coolhabit.postervideoapp.video.databinding.RvPosterItemBinding
 import com.coolhabit.postervideoapp.video.presentation.model.VideoItemUI
 import javax.inject.Inject

@@ -2,4 +2,5 @@
 <resources>
     <string name="text_btn">TEXT</string>
     <string name="go_back">You shall not pass!</string>
+    <string name="some_text">Some text</string>
 </resources>

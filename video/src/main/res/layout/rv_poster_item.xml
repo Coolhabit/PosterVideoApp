@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:clickable="true"
-    android:foreground="@drawable/bg_rectangle_ripple"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:foreground="@drawable/bg_rectangle_ripple">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/poster"
-        app:strokeColor="@color/blue_select"
-        app:strokeWidth="@dimen/size_2"
-        app:shapeAppearanceOverlay="@style/RoundCorner5ImageStyle"
         android:layout_width="@dimen/size_70"
-        android:padding="@dimen/size_1"
         android:layout_height="@dimen/size_0"
+        android:padding="@dimen/size_1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundCorner5ImageStyle"
+        app:strokeColor="@color/blue_select"
+        app:strokeWidth="@dimen/size_2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
